@@ -1,0 +1,15 @@
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/api/cronsend": "pages/api/cronsend.js",
+  "/api/customers": "pages/api/customers.js",
+  "/api/dashboard": "pages/api/dashboard.js",
+  "/api/kakaoLink": "pages/api/kakaoLink.js",
+  "/api/message": "pages/api/message.js",
+  "/api/recontact": "pages/api/recontact.js",
+  "/api/logs": "pages/api/logs.js",
+  "/api/smsLink": "pages/api/smsLink.js",
+  "/api/updateStatus": "pages/api/updateStatus.js",
+  "/": "pages/index.js",
+  "/_document": "pages/_document.js"
+}

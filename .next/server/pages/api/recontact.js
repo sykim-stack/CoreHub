@@ -1,0 +1,9 @@
+"use strict";(()=>{var e={};e.id=46,e.ids=[46],e.modules={145:e=>{e.exports=require("next/dist/compiled/next-server/pages-api.runtime.prod.js")},1309:e=>{e.exports=import("@supabase/supabase-js")},6249:(e,t)=>{Object.defineProperty(t,"l",{enumerable:!0,get:function(){return function e(t,n){return n in t?t[n]:"then"in t&&"function"==typeof t.then?t.then(t=>e(t,n)):"function"==typeof t&&"default"===n?t:void 0}}})},3574:(e,t,n)=>{n.a(e,async(e,a)=>{try{n.r(t),n.d(t,{config:()=>d,default:()=>c,routeModule:()=>p});var r=n(1802),s=n(7153),o=n(6249),i=n(7246),u=e([i]);i=(u.then?(await u)():u)[0];let c=(0,o.l)(i,"default"),d=(0,o.l)(i,"config"),p=new r.PagesAPIRouteModule({definition:{kind:s.x.PAGES_API,page:"/api/recontact",pathname:"/api/recontact",bundlePath:"",filename:""},userland:i});a()}catch(e){a(e)}})},7246:(e,t,n)=>{n.a(e,async(e,a)=>{try{n.r(t),n.d(t,{default:()=>o});var r=n(1309),s=e([r]);async function o(e,t){let n=(0,r.createClient)(process.env.SUPABASE_URL,process.env.SUPABASE_SERVICE_ROLE_KEY),{data:a,error:s}=await n.from("followups").select(`
+      id,
+      scheduled_at,
+      customers (
+        id,
+        name,
+        phone
+      )
+    `).lte("scheduled_at",new Date().toISOString()).eq("status","pending");if(s)return t.status(500).json({error:s});let o=a.map(e=>({customer_id:e.customers.id,name:e.customers.name,phone:e.customers.phone}));t.status(200).json(o)}r=(s.then?(await s)():s)[0],a()}catch(e){a(e)}})},7153:(e,t)=>{var n;Object.defineProperty(t,"x",{enumerable:!0,get:function(){return n}}),function(e){e.PAGES="PAGES",e.PAGES_API="PAGES_API",e.APP_PAGE="APP_PAGE",e.APP_ROUTE="APP_ROUTE"}(n||(n={}))},1802:(e,t,n)=>{e.exports=n(145)}};var t=require("../../webpack-api-runtime.js");t.C(e);var n=t(t.s=3574);module.exports=n})();
